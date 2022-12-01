@@ -1,56 +1,97 @@
 <!-- notes
 Local craft weapons and armor
-Works on commision only, custom work
 Track my staff and inventory
 Put items I craft up for sale on site
 commission requests
 Equipment maintenance and facility
-'maker's space' type vibe
 need heartforge logo
-
+index - home page & navigation to other pages with functions
+orders - allows DM to post custom orders for me to make, maybe something requiring rare ingredients,
+    - create UI for DM to easily add 'order quests' CRUD
+    - allow selection & tracking of selected order & completion % ex:"3/5 rare parts collected"
+shop - page for other players to buy my product
+    - create UI to CRUD product
+    - create your own weapon & armor, select ingredients used, creates a custom order
+staff - page to hire/fire/upgrade different staff positions
+    - blacksmith, forgehand, shop attendant, herald
+    - ui to CRUD employees
+upgrades - page to view current facilities/equipment and improve it
+    - UI to display equipment (anvils, forges, etc) and info about them
+    - Show available upgrades & cost
 -->
 
 
-<!DOCTYPE html>
-<html lang="en">
 <head>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Moradin's Hammer</title>
 </head>
+<style>
+    .card-image {
+        height: 50vh;
+    }
+    .card-image > img {
+        height: 100%;
+    }
+    .card {
+        height: 100%;
+    }
+</style>
 <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="/index.html">Home</a></li>
-                <li><a href="shop.html">Shop</a></li>
-                <li><a href="staff.html">Staff</a></li>
-                <li><a href="upgrades.html">Upgrades</a></li>
-                <li><a href="orders.html">Custom Orders</a></li>
-            </ul>
-        </nav>
+        <nav class="navbar navbar-light bg-light">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="/index.html">Moradin's Hammer</a>
+            </div>
+          </nav>
     </header>
-    <main>
-        <aside>
-            <img src="https://via.placeholder.com/150" alt="heartforge logo">
-        </aside>
-        <article>
-            <h1>Welcome to Moradin's Hammer</h1>
-            <img src="moradin.jpg" class="banner" alt="moradin">
-            <p>Reliable handcrafted arms and armor worthy of Moradin himself!</p>
-            <p>50% off 1st time repairs on Epic Flail & Armorcrombie branded product.</p>
-        </article>
-    </main>
+    <div class="container my-3">
+        <div class="row">
+            <div class="col-sm-6 my-3">
+                <div class="card">
+                    <div class="card-image"><img src="/assets/shop.png" class="card-img-top" alt="..."></div>
+                    <div class="card-body">
+                    <h5 class="card-title">Shopkeeper</h5>
+                    <p class="card-text">Speak with the shopkeeper to buy and sell arms and armor.</p>
+                    <a href="shop.html" class="btn btn-primary">Browse Shop</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 my-3">
+                <div class="card">
+                    <div class="card-image"><img src="/assets/orders.jpg" class="card-img-top" alt="..."></div>
+                    <div class="card-body">
+                    <h5 class="card-title">Custom Orders & Commision Work</h5>
+                    <p class="card-text">Place an order to be made by our artisan dwarven clan crafter.</p>
+                    <p class="card-text">Disclamer: Completion of orders is left to the discretion of the smith, payment is due at time of delivery.</p>
+                    <a href="orders.html" class="btn btn-primary">Place an order</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 my-3">
+                <div class="card">
+                    <div class="card-image"><img src="/assets/moradin.jpg" class="card-img-top" alt="..."></div>                    <div class="card-body">
+                    <h5 class="card-title">Staff Management</h5>
+                    <p class="card-text">Hire, Fire, Train and assign duties.</p>
+                    <a href="staff.html" class="btn btn-primary">Manage Staff</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6 my-3">
+                <div class="card">
+                    <div class="card-image"><img src="/assets/smithy.webp" class="card-img-top" alt="..."></div>
+                    <div class="card-body">
+                    <h5 class="card-title">Visit the Smithy</h5>
+                    <p class="card-text">Manage and upgrade the smithy and your blacksmithing tools.</p>
+                    <a href="smithy.html" class="btn btn-primary">Visit Smithy</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
-<footer>
-    <nav>
-        <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="staff.html">Staff</a></li>
-            <li><a href="upgrades.html">Upgrades</a></li>
-            <li><a href="orders.html">Custom Orders</a></li>
-        </ul>
-    </nav>
-</footer>
-</html>
+
+   
